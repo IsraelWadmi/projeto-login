@@ -30,7 +30,6 @@ section#login {
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%);
     overflow: hidden;
 
     background-color: white;
@@ -39,6 +38,7 @@ section#login {
     border-radius: 20px;
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.452);
 
+    transform: translate(-50%, -50%);
     transition: width .5s, height .5s; /* Faz transição dos media querys */
     transition-timing-function: ease; /* Serve para suavizar a transição*/
 }
@@ -66,15 +66,39 @@ div#formulario > p {
 
 form > div.campo {
     background-color: #5f2c82;
+    border: 3px solid #5f2c82;
     display: block;
     width: 100%;
     height: 40px;
-    border-radius: 5px;
+    border-radius: 8px;
     margin: 5px 0px;
 }
 
 div.campo > label {
     display: none;
+}
+
+div.campo > span {
+    color: white;
+    /* background-color: black; */
+    font-size: 2em;
+    width: 40px;
+    padding: 5px;
+}
+
+div.campo > input {
+    background-color: #94cfcd;
+    font-size: 1em;
+    width: calc(100% - 45px); /* calc() significa cálculo, é muito importante*/
+    height: 100%;
+    border: 0px;
+    border-radius: 8px;
+    padding: 4px;
+    transform: translateY(-12px); /*Sempre que for fazer uma animação ou uma transformação, coloque ela na última linha*/
+}
+
+div.campo > input:focus-within { /* é usado para a parte do site cen escrita*/
+    background-color: white;
 }
 
 div.campo > label {
